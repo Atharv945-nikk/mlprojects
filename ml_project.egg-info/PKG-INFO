@@ -6,6 +6,7 @@ Author-email: atharvpatil49v@gmail.com
 Requires-Dist: pandas
 Requires-Dist: numpy
 Requires-Dist: seaborn
+Requires-Dist: matplotlib
 Dynamic: author
 Dynamic: author-email
 Dynamic: requires-dist

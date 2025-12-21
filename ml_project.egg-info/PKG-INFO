@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: ml-project
+Version: 0.0.1
+Author: Atharv Patil
+Author-email: atharvpatil49v@gmail.com
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: seaborn
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist

@@ -1,5 +1,6 @@
 import sys  #when the exception is control the sys library automatically have information
 import logging
+from src.logger import logging
 
 def error_msg_detail(error,error_detail:sys):
        _,_,exc_tb = error_detail.exc_info() #execution information (have three imp information) & exc_tb told as in which filw the exception occur , on which line no. all the information store in this variable 
@@ -18,3 +19,11 @@ class CustomException(Exception):
       def __str__(self):
            return self.error_msg
       
+if __name__ == "__main__":
+     
+     try:
+          a =1/0
+     except Exception as e:
+          logging.info("Divide by Zero")
+          raise CustomException(e,sys)
+         

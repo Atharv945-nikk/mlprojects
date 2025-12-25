@@ -9,6 +9,11 @@ from dataclasses import dataclass
 from src.componenets.data_transformation import DataTranformation
 from src.componenets.data_transformation import datatransformationConfig
 
+from src.componenets.model_trainer import Model_trainer
+from src.componenets.model_trainer import ModelTrainerConifg
+
+
+
 @dataclass
 class DataIngestionConfig: # inputs were we save the data files
     
@@ -55,7 +60,10 @@ if __name__ =="__main__":
     train_data,test_data = obj.initiate_data_ingestion()
 
     data_transformation  = DataTranformation()
-    data_transformation.initiate_data_transformation(train_data,test_data)
+    train_arr,test_arr,_= data_transformation.initiate_data_transformation(train_data,test_data)
+
+    model_trainer = Model_trainer()
+    print(model_trainer.initiate_model_trainer(train_arr,test_arr))
 
 
 
